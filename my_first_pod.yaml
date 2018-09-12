@@ -8,4 +8,4 @@ spec:
   containers:
   - name: hello-devfest
     image: busybox
-    command: ['sh', '-c', 'while true; do echo Hello DevFest! && sleep 1; done']
+    command: ['sh', '-c', 'while true; do echo Hello World! && sleep 1; done']
