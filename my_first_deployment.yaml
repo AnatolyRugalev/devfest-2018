@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: devfest-deployment
   labels:
-    app: myapp-deployment
+    app: devfest-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: myapp
+      app: devfest
   template:
     metadata:
       labels:
-        app: myapp
+        app: devfest
     spec:
       containers:
       - name: hello-devfest

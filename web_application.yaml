@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-web-application
+  name: webapp
   labels:
-    app: my-web-application
+    app: webapp
 spec:
   replicas: 3
   selector:
