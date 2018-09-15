@@ -26,3 +26,6 @@
 Job с Yandex.Tank, который демонстрирует возможности autoscaling. Для конфигурации autoscaling, можно воспользоваться
 командой `kubectl autoscale deploy webapp --min=1 --max=10 --cpu-percent=5`.
 
+## docker-compose.yml
+
+Просто пример того, как может выглядеть docker-compose файл
