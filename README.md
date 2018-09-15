@@ -23,6 +23,6 @@
 
 ## 04-tank.yaml
 
-Job с Yandex.Tankб который демонстрирует возможности autoscaling. Для конфигурации autoscaleing, можно воспользоваться
+Job с Yandex.Tank, который демонстрирует возможности autoscaling. Для конфигурации autoscaling, можно воспользоваться
 командой `kubectl autoscale deploy webapp --min=1 --max=10 --cpu-percent=5`.
 
