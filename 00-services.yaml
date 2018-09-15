@@ -1,3 +1,4 @@
+---
 kind: Service
 apiVersion: v1
 metadata:
@@ -10,3 +11,12 @@ spec:
   - protocol: TCP
     targetPort: 80
     port: 80
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: webapp-ingress
+spec:
+  backend:
+    serviceName: webapp
+    servicePort: 80

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: devfest2018
-        image: anatolyrugalev/devfest-2018:1.0
+        image: anatolyrugalev/devfest-2018:hello
         ports:
         - containerPort: 80
           protocol: TCP
