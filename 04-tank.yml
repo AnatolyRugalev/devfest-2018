@@ -1,0 +1,44 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: tank
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: yandex-tank
+        image: direvius/yandex-tank
+        args:
+        - '-c'
+        - '/etc/yandex-tank/loadtest/load.yaml'
+        volumeMounts:
+        - name: config
+          mountPath: /etc/yandex-tank/loadtest
+      volumes:
+      - name: config
+        configMap:
+          name: yandex-tank-config
+          items:
+          - key: load.yaml
+            path: load.yaml
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: yandex-tank-config
+data:
+  load.yaml: |
+    phantom:
+      instances: 2
+      address: webapp
+      uris:
+        - /
+      load_profile:
+        load_type: rps
+        schedule: const(2000, 10m)
+    console:
+      enabled: true
+      short_only: true
+    telegraf:
+      enabled: false
