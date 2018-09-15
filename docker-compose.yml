@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  good_boy:
+    image: my_registry/good_boy:1.0
+    environment:
+      BREAD_DB_ADDRESS: bread_db
+      BREAD_DB_USER: good
+      BREAD_DB_PASSWORD: boy
+
+  bread_db:
+    image: my_registry/bread_db:1.0
+    environment:
+      USERNAME: good
+      PASSWORD: boy
